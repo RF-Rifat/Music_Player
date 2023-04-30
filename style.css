@@ -15,7 +15,7 @@ body{
 }
 main{
     height: calc(max(610px));
-    width: calc(max(400px));
+    width: calc(min(400px));
     background-color: #f5f5f5;
     border-radius: .5rem;
     box-shadow: 2px 2px 5px #00000069,
@@ -181,6 +181,13 @@ input[type="range"]::-moz-range-progress {
 
 i:active{
     font-size: large;
+}
+
+.menu-btn:active{
+    transform: rotate(90deg);
+}
+.back-btn:active{
+    transform: scale(.7);
 }
 
 /* Javascript section */
