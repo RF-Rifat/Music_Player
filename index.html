@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/c775ac9d8b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="music-list.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="footer.js"></script>
+    <script defer src="menu-section.js"></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <main>
+      <div class="menuSection d-none"></div>
+      <div class="wrapper">
+        <div class="header">
+          <img src="images/back.png" alt="icon" class="back-btn" onclick="previousMusic()"/>
+          <img src="images/menu.png" alt="icon" class="menu-btn" />
+        </div>
+
+        <h3 class="header-text">Now Playing</h3>
+
+        <div class="track">
+          <div class="track-img"><img src="" alt="" /></div>
+        </div>
+        <div class="track-name">
+          <h3 class="song-name">Song Name</h3>
+          <span class="singer-name">Singer Name</span>
+        </div>
+      </div>
+
+
+      <section>
+        <div class="time-count">
+          <span class="time">00:00</span>
+          <span class="total-time">00:00</span>
+        </div>
+        <div class="progress-bar">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+        <div class="music-control">
+          <div class="previous-btn" onclick="previousMusic()"><i class="fa-solid fa-backward"></i></div>
+          <i class="fa-regular fa-circle-play play-btn" onclick="playMusic()"></i>
+          <div class="next-btn" onclick="nextMusic()"><i class="fa-solid fa-forward"></i></div>
+        </div>
+
+        <div class="footer">
+          <div>
+            <i class="fa-solid fa-heart" id="react-btn" onclick="react()"></i>
+            <i class="fa-solid fa-circle-down" id="download-btn" onclick="downloadMusic()"></i>
+          </div>
+          <div>
+            <i class="fas fa-random" id="randomPlayBtn" onclick="playRandom()"></i>
+            <i class="fa-solid fa-rotate" id="refresh" onclick="refresh()"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
